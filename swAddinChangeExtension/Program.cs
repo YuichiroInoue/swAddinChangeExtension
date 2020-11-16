@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using SldWorks;
 using SwConst;
 using System.Drawing;
@@ -67,6 +67,8 @@ namespace swAddinChangeExtension
                     swModel.ShowNamedView2("", 7);
                     swModel.ViewZoomtofit2();
                     swApp.FrameState = 1;
+
+                    Thread.Sleep(1000);
 
                     Bitmap bmp = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
                     Graphics g = Graphics.FromImage(bmp);
