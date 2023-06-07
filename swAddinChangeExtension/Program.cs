@@ -61,7 +61,7 @@ namespace swAddinChangeExtension
                 string filename = file.Remove(0, directory.Length + 1).Replace(@"\", "_");
                 string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file);
                 string extension = Path.GetExtension(file);
-                if (extension != ".step" && extension != ".Step" && extension != ".STEP" && extension != "x_t" && extension != "X_T")
+                if (extension != ".step " && extension != ".Step" && extension != ".STEP" && extension != ".x_t" && extension != ".X_T" && extension!=".stp")
                 {
                     continue;
                 }
